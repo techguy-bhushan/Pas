@@ -1,4 +1,6 @@
-target
-.idea
-springinaction.iml
+target/
+.gradle/
+.idea/
+
 *.iml
+out/
