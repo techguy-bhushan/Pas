@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="com.springinaction.part1.chapter2.di.wirecollection.commonservice.DayFortuneService" id="fortuneService">
+    </bean>
+
+    <bean class="com.springinaction.part1.chapter2.di.wirecollection.list.CricketPlayerService" id="cricketPlayerService">
+        <property name="playersName">
+            <list>
+                <value>Chris Cairns</value>
+                <value>Stephen Fleming</value>
+                <value>Chris Gayle dagger</value>
+                <value>Adam Gilchrist (wk)</value>
+                <value>Darren Gough</value>
+                <value>Matthew Hayden</value>
+                <value>Brian Larac</value>
+                <value>Rahul Dravid</value>
+                <value>Glenn McGrath</value>
+                <value>Kevin Pietersen</value>
+                <value>Virender Sehwag</value>
+            </list>
+        </property>
+        <property name="fortuneServices">
+            <list>
+                <ref bean="fortuneService"></ref>
+            </list>
+        </property>
+    </bean>
+
+</beans>
