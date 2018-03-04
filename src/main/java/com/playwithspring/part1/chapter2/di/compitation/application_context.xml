@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+        default-init-method="afterPropertiesSet"
+        default-destroy-method="destroy">
+
+
+    <bean class="com.playwithspring.part1.chapter2.di.compitation.Juggler" id="juggler">
+        <constructor-arg value="5"></constructor-arg>
+    </bean>
+
+    <bean id="madhusala" class="com.playwithspring.part1.chapter2.di.compitation.Madhusala">
+    </bean>
+
+    <bean id="poetJuggler" class="com.playwithspring.part1.chapter2.di.compitation.PoetJuggler">
+        <constructor-arg value="10"></constructor-arg>
+        <constructor-arg ref="madhusala"></constructor-arg>
+    </bean>
+
+    <bean id="poetJugglerWithParentJugglerBean" class="com.playwithspring.part1.chapter2.di.compitation.PoetJuggler" parent="juggler">
+        <constructor-arg ref="madhusala"></constructor-arg>
+    </bean>
+</beans>
