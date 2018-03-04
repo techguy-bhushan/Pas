@@ -4,7 +4,6 @@ import com.springinaction.part1.chapter2.di.wirecollection.commonservice.Fortune
 import com.springinaction.part1.chapter2.di.wirecollection.commonservice.PlayerService;
 
 import java.util.List;
-
 public class CricketPlayerService implements PlayerService {
     private List<String> playersName;
     private List<FortuneService>  fortuneServices;

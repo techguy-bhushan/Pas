@@ -1,5 +1,7 @@
 package com.springinaction.part1.chapter2.di.compitation;
 
+import com.springinaction.part1.commons.Poem;
+
 public class Madhusala implements Poem {
 
     public static String[] LINES = {

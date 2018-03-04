@@ -1,7 +1,6 @@
 package com.springinaction.part1.chapter2.di.compitation;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import com.springinaction.part1.commons.Performer;
 
 public class Juggler implements Performer/*,InitializingBean, DisposableBean*/ {
     int beanBags = 3;
