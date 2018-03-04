@@ -1,0 +1,1 @@
+package com.playwithspring.part2.chapter5.jpa;
